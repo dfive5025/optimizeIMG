@@ -449,7 +449,7 @@ export default class Intro extends Component<Props, State> {
       //     </button>
       //   )}
       // </div>
-      <div>nguyentuan dattttt</div>
+      <div>nguyentuan dattttttttttttttttttttttt</div>
     );
   }
 }
