@@ -226,230 +226,230 @@ export default class Intro extends Component<Props, State> {
     { fetchingDemoIndex, beforeInstallEvent, showBlobSVG }: State,
   ) {
     return (
-      // <div class={style.intro}>
-      //   <input
-      //     class={style.hide}
-      //     ref={linkRef(this, 'fileInput')}
-      //     type="file"
-      //     onChange={this.onFileChange}
-      //   />
-      //   <div class={style.main}>
-      //     {!__PRERENDER__ && (
-      //       <canvas
-      //         ref={linkRef(this, 'blobCanvas')}
-      //         class={style.blobCanvas}
-      //       />
-      //     )}
-      //     <h1 class={style.logoContainer}>
-      //       <img
-      //         class={style.logo}
-      //         src={logoWithText}
-      //         alt="Squoosh"
-      //         width="539"
-      //         height="162"
-      //       />
-      //     </h1>
-      //     <div class={style.loadImg}>
-      //       {showBlobSVG && (
-      //         <svg
-      //           class={style.blobSvg}
-      //           viewBox="-1.25 -1.25 2.5 2.5"
-      //           preserveAspectRatio="xMidYMid slice"
-      //         >
-      //           {startBlobs.map((points) => (
-      //             <path
-      //               d={points
-      //                 .map((point, i) => {
-      //                   const nextI = i === points.length - 1 ? 0 : i + 1;
-      //                   let d = '';
-      //                   if (i === 0) {
-      //                     d += `M${point[2]} ${point[3]}`;
-      //                   }
-      //                   return (
-      //                     d +
-      //                     `C${point[4]} ${point[5]} ${points[nextI][0]} ${points[nextI][1]} ${points[nextI][2]} ${points[nextI][3]}`
-      //                   );
-      //                 })
-      //                 .join('')}
-      //             />
-      //           ))}
-      //         </svg>
-      //       )}
-      //       <div
-      //         class={style.loadImgContent}
-      //         style={{ visibility: __PRERENDER__ ? 'hidden' : '' }}
-      //       >
-      //         <button class={style.loadBtn} onClick={this.onOpenClick}>
-      //           <svg viewBox="0 0 24 24" class={style.loadIcon}>
-      //             <path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12c0 1.1.9 2 2 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z" />
-      //           </svg>
-      //         </button>
-      //         <div>
-      //           <span class={style.dropText}>Drop </span>OR{' '}
-      //           {supportsClipboardAPI ? (
-      //             <button class={style.pasteBtn} onClick={this.onPasteClick}>
-      //               Paste
-      //             </button>
-      //           ) : (
-      //             'Paste'
-      //           )}
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      //   <div class={style.demosContainer}>
-      //     <svg viewBox="0 0 1920 140" class={style.topWave}>
-      //       <path
-      //         d="M1920 0l-107 28c-106 29-320 85-533 93-213 7-427-36-640-50s-427 0-533 7L0 85v171h1920z"
-      //         class={style.subWave}
-      //       />
-      //       <path
-      //         d="M0 129l64-26c64-27 192-81 320-75 128 5 256 69 384 64 128-6 256-80 384-91s256 43 384 70c128 26 256 26 320 26h64v96H0z"
-      //         class={style.mainWave}
-      //       />
-      //     </svg>
-      //     <div class={style.contentPadding}>
-      //       <p class={style.demoTitle}>
-      //         Or <strong>try one</strong> of these:
-      //       </p>
-      //       <ul class={style.demos}>
-      //         {demos.map((demo, i) => (
-      //           <li>
-      //             <button
-      //               class="unbutton"
-      //               onClick={(event) => this.onDemoClick(i, event)}
-      //             >
-      //               <div class={style.demoContainer}>
-      //                 <div class={style.demoIconContainer}>
-      //                   <img
-      //                     class={style.demoIcon}
-      //                     src={demo.iconUrl}
-      //                     alt={demo.description}
-      //                   />
-      //                   {fetchingDemoIndex === i && (
-      //                     <div class={style.demoLoader}>
-      //                       <loading-spinner />
-      //                     </div>
-      //                   )}
-      //                 </div>
-      //                 <div class={style.demoSize}>{demo.size}</div>
-      //               </div>
-      //             </button>
-      //           </li>
-      //         ))}
-      //       </ul>
-      //     </div>
-      //   </div>
+      <div class={style.intro}>
+        <input
+          class={style.hide}
+          ref={linkRef(this, 'fileInput')}
+          type="file"
+          onChange={this.onFileChange}
+        />
+        <div class={style.main}>
+          {!__PRERENDER__ && (
+            <canvas
+              ref={linkRef(this, 'blobCanvas')}
+              class={style.blobCanvas}
+            />
+          )}
+          <h1 class={style.logoContainer}>
+            <img
+              class={style.logo}
+              src={logoWithText}
+              alt="Squoosh"
+              width="539"
+              height="162"
+            />
+          </h1>
+          <div class={style.loadImg}>
+            {showBlobSVG && (
+              <svg
+                class={style.blobSvg}
+                viewBox="-1.25 -1.25 2.5 2.5"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                {startBlobs.map((points) => (
+                  <path
+                    d={points
+                      .map((point, i) => {
+                        const nextI = i === points.length - 1 ? 0 : i + 1;
+                        let d = '';
+                        if (i === 0) {
+                          d += `M${point[2]} ${point[3]}`;
+                        }
+                        return (
+                          d +
+                          `C${point[4]} ${point[5]} ${points[nextI][0]} ${points[nextI][1]} ${points[nextI][2]} ${points[nextI][3]}`
+                        );
+                      })
+                      .join('')}
+                  />
+                ))}
+              </svg>
+            )}
+            <div
+              class={style.loadImgContent}
+              style={{ visibility: __PRERENDER__ ? 'hidden' : '' }}
+            >
+              <button class={style.loadBtn} onClick={this.onOpenClick}>
+                <svg viewBox="0 0 24 24" class={style.loadIcon}>
+                  <path d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12c0 1.1.9 2 2 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z" />
+                </svg>
+              </button>
+              <div>
+                <span class={style.dropText}>Drop </span>OR{' '}
+                {supportsClipboardAPI ? (
+                  <button class={style.pasteBtn} onClick={this.onPasteClick}>
+                    Paste
+                  </button>
+                ) : (
+                  'Paste'
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class={style.demosContainer}>
+          <svg viewBox="0 0 1920 140" class={style.topWave}>
+            <path
+              d="M1920 0l-107 28c-106 29-320 85-533 93-213 7-427-36-640-50s-427 0-533 7L0 85v171h1920z"
+              class={style.subWave}
+            />
+            <path
+              d="M0 129l64-26c64-27 192-81 320-75 128 5 256 69 384 64 128-6 256-80 384-91s256 43 384 70c128 26 256 26 320 26h64v96H0z"
+              class={style.mainWave}
+            />
+          </svg>
+          <div class={style.contentPadding}>
+            <p class={style.demoTitle}>
+              Or <strong>try one</strong> of these:
+            </p>
+            <ul class={style.demos}>
+              {demos.map((demo, i) => (
+                <li>
+                  <button
+                    class="unbutton"
+                    onClick={(event) => this.onDemoClick(i, event)}
+                  >
+                    <div class={style.demoContainer}>
+                      <div class={style.demoIconContainer}>
+                        <img
+                          class={style.demoIcon}
+                          src={demo.iconUrl}
+                          alt={demo.description}
+                        />
+                        {fetchingDemoIndex === i && (
+                          <div class={style.demoLoader}>
+                            <loading-spinner />
+                          </div>
+                        )}
+                      </div>
+                      <div class={style.demoSize}>{demo.size}</div>
+                    </div>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-      //   <div class={style.bottomWave}>
-      //     <svg viewBox="0 0 1920 79" class={style.topWave}>
-      //       <path
-      //         d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z"
-      //         class={style.infoWave}
-      //       />
-      //     </svg>
-      //   </div>
+        <div class={style.bottomWave}>
+          <svg viewBox="0 0 1920 79" class={style.topWave}>
+            <path
+              d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z"
+              class={style.infoWave}
+            />
+          </svg>
+        </div>
 
-      //   <section class={style.info}>
-      //     <div class={style.infoContainer}>
-      //       <SlideOnScroll>
-      //         <div class={style.infoContent}>
-      //           <div class={style.infoTextWrapper}>
-      //             <h2 class={style.infoTitle}>Small</h2>
-      //             <p class={style.infoCaption}>nguyen tuan dat.</p>
-      //           </div>
-      //           <div class={style.infoImgWrapper}>
-      //             <img
-      //               class={style.infoImg}
-      //               src={smallSectionAsset}
-      //               alt="silhouette of a large 1.4 megabyte image shrunk into a smaller 80 kilobyte image"
-      //               width="536"
-      //               height="522"
-      //             />
-      //           </div>
-      //         </div>
-      //       </SlideOnScroll>
-      //     </div>
-      //   </section>
+        <section class={style.info}>
+          <div class={style.infoContainer}>
+            <SlideOnScroll>
+              <div class={style.infoContent}>
+                <div class={style.infoTextWrapper}>
+                  <h2 class={style.infoTitle}>Small</h2>
+                  <p class={style.infoCaption}>nguyen tuan dat.</p>
+                </div>
+                <div class={style.infoImgWrapper}>
+                  <img
+                    class={style.infoImg}
+                    src={smallSectionAsset}
+                    alt="silhouette of a large 1.4 megabyte image shrunk into a smaller 80 kilobyte image"
+                    width="536"
+                    height="522"
+                  />
+                </div>
+              </div>
+            </SlideOnScroll>
+          </div>
+        </section>
 
-      //   <section class={style.info}>
-      //     <div class={style.infoContainer}>
-      //       <SlideOnScroll>
-      //         <div class={style.infoContent}>
-      //           <div class={style.infoTextWrapper}>
-      //             <h2 class={style.infoTitle}>Simple</h2>
-      //             <p class={style.infoCaption}>
-      //               Open your image, inspect the differences, then save
-      //               instantly. Feeling adventurous? Adjust the settings for even
-      //               smaller files.
-      //             </p>
-      //           </div>
-      //           <div class={style.infoImgWrapper}>
-      //             <img
-      //               class={style.infoImg}
-      //               src={simpleSectionAsset}
-      //               alt="grid of multiple shrunk images displaying various options"
-      //               width="538"
-      //               height="384"
-      //             />
-      //           </div>
-      //         </div>
-      //       </SlideOnScroll>
-      //     </div>
-      //   </section>
+        <section class={style.info}>
+          <div class={style.infoContainer}>
+            <SlideOnScroll>
+              <div class={style.infoContent}>
+                <div class={style.infoTextWrapper}>
+                  <h2 class={style.infoTitle}>Simple</h2>
+                  <p class={style.infoCaption}>
+                    Open your image, inspect the differences, then save
+                    instantly. Feeling adventurous? Adjust the settings for even
+                    smaller files.
+                  </p>
+                </div>
+                <div class={style.infoImgWrapper}>
+                  <img
+                    class={style.infoImg}
+                    src={simpleSectionAsset}
+                    alt="grid of multiple shrunk images displaying various options"
+                    width="538"
+                    height="384"
+                  />
+                </div>
+              </div>
+            </SlideOnScroll>
+          </div>
+        </section>
 
-      //   <section class={style.info}>
-      //     <div class={style.infoContainer}>
-      //       <SlideOnScroll>
-      //         <div class={style.infoContent}>
-      //           <div class={style.infoTextWrapper}>
-      //             <h2 class={style.infoTitle}>Secure</h2>
-      //             <p class={style.infoCaption}>
-      //               Worried about privacy? Images never leave your device since
-      //               Squoosh does all the work locally.
-      //             </p>
-      //           </div>
-      //           <div class={style.infoImgWrapper}>
-      //             <img
-      //               class={style.infoImg}
-      //               src={secureSectionAsset}
-      //               alt="silhouette of a cloud with a 'no' symbol on top"
-      //               width="498"
-      //               height="333"
-      //             />
-      //           </div>
-      //         </div>
-      //       </SlideOnScroll>
-      //     </div>
-      //   </section>
+        <section class={style.info}>
+          <div class={style.infoContainer}>
+            <SlideOnScroll>
+              <div class={style.infoContent}>
+                <div class={style.infoTextWrapper}>
+                  <h2 class={style.infoTitle}>Secure</h2>
+                  <p class={style.infoCaption}>
+                    Worried about privacy? Images never leave your device since
+                    Squoosh does all the work locally.
+                  </p>
+                </div>
+                <div class={style.infoImgWrapper}>
+                  <img
+                    class={style.infoImg}
+                    src={secureSectionAsset}
+                    alt="silhouette of a cloud with a 'no' symbol on top"
+                    width="498"
+                    height="333"
+                  />
+                </div>
+              </div>
+            </SlideOnScroll>
+          </div>
+        </section>
 
-      //   <footer class={style.footer}>
-      //     <div class={style.footerContainer}>
-      //       <svg viewBox="0 0 1920 79" class={style.topWave}>
-      //         <path
-      //           d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z"
-      //           class={style.footerWave}
-      //         />
-      //       </svg>
-      //       <div class={style.footerPadding}>
-      //         <footer class={style.footerItems}>
-      //           {/* <a
-      //             class={style.footerLink}
-      //             href="https://github.com/GoogleChromeLabs/squoosh/blob/dev/README.md#privacy"
-      //           >
-      //             Privacy
-      //           </a> */}
-      //         </footer>
-      //       </div>
-      //     </div>
-      //   </footer>
-      //   {beforeInstallEvent && (
-      //     <button class={style.installBtn} onClick={this.onInstallClick}>
-      //       cài về máy
-      //     </button>
-      //   )}
-      // </div>
-      <div>nguyentuan dattttttttttttttttttttttt</div>
+        <footer class={style.footer}>
+          <div class={style.footerContainer}>
+            <svg viewBox="0 0 1920 79" class={style.topWave}>
+              <path
+                d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z"
+                class={style.footerWave}
+              />
+            </svg>
+            <div class={style.footerPadding}>
+              <footer class={style.footerItems}>
+                {/* <a
+                  class={style.footerLink}
+                  href="https://github.com/GoogleChromeLabs/squoosh/blob/dev/README.md#privacy"
+                >
+                  Privacy
+                </a> */}
+              </footer>
+            </div>
+          </div>
+        </footer>
+        {beforeInstallEvent && (
+          <button class={style.installBtn} onClick={this.onInstallClick}>
+            cài về máy
+          </button>
+        )}
+      </div>
+      // <div>nguyentuan dattttttttttttttttttttttt</div>
     );
   }
 }
