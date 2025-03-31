@@ -64,10 +64,6 @@ export default class App extends Component<Props, State> {
       this.setState({ file, awaitingShareTarget: false });
     });
 
-    // Since iOS 10, Apple tries to prevent disabling pinch-zoom. This is great in theory, but
-    // really breaks things on Squoosh, as you can easily end up zooming the UI when you mean to
-    // zoom the image. Once you've done this, it's really difficult to undo. Anyway, this seems to
-    // prevent it.
     document.body.addEventListener('gesturestart', (event: any) => {
       event.preventDefault();
     });
@@ -118,13 +114,16 @@ export default class App extends Component<Props, State> {
       <div class={style.app}>
         <file-drop onfiledrop={this.onFileDrop} class={style.drop}>
           {showSpinner ? (
-            <loading-spinner class={style.appLoader} />
+            // <loading-spinner class={style.appLoader} />
+            <div></div>
           ) : isEditorOpen ? (
             Compress && (
-              <Compress file={file!} showSnack={this.showSnack} onBack={back} />
+              // <Compress file={file!} showSnack={this.showSnack} onBack={back} />
+              <div></div>
             )
           ) : (
-            <Intro onFile={this.onIntroPickFile} showSnack={this.showSnack} />
+            // <Intro onFile={this.onIntroPickFile} showSnack={this.showSnack} />
+            <div></div>
           )}
           <snack-bar ref={linkRef(this, 'snackbar')} />
         </file-drop>

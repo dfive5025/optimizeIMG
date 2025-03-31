@@ -433,26 +433,19 @@ export default class Intro extends Component<Props, State> {
             </svg>
             <div class={style.footerPadding}>
               <footer class={style.footerItems}>
-                <a
+                {/* <a
                   class={style.footerLink}
                   href="https://github.com/GoogleChromeLabs/squoosh/blob/dev/README.md#privacy"
                 >
                   Privacy
-                </a>
-                <a
-                  class={style.footerLinkWithLogo}
-                  href="https://github.com/GoogleChromeLabs/squoosh"
-                >
-                  <img src={githubLogo} alt="" width="10" height="10" />
-                  Source on Github
-                </a>
+                </a> */}
               </footer>
             </div>
           </div>
         </footer>
         {beforeInstallEvent && (
           <button class={style.installBtn} onClick={this.onInstallClick}>
-            Install
+            cài về máy
           </button>
         )}
       </div>
