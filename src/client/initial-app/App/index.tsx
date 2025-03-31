@@ -11,7 +11,7 @@ import 'file-drop-element';
 import 'shared/custom-els/snack-bar';
 // import Intro from 'shared/prerendered-app/Intro';
 import 'shared/custom-els/loading-spinner';
-import Intro from 'shared/prerendered-app/Intro';
+import Intro from '../../../shared/prerendered-app/Intro';
 
 const ROUTE_EDITOR = '/editor';
 
