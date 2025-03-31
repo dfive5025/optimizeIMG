@@ -111,23 +111,27 @@ export default class App extends Component<Props, State> {
     const showSpinner = awaitingShareTarget || (isEditorOpen && !Compress);
 
     return (
-      <div class={style.app}>
-        <file-drop onfiledrop={this.onFileDrop} class={style.drop}>
-          {showSpinner ? (
-            // <loading-spinner class={style.appLoader} />
-            <div></div>
-          ) : isEditorOpen ? (
-            Compress && (
-              // <Compress file={file!} showSnack={this.showSnack} onBack={back} />
-              <div></div>
-            )
-          ) : (
-            // <Intro onFile={this.onIntroPickFile} showSnack={this.showSnack} />
-            <div></div>
-          )}
-          <snack-bar ref={linkRef(this, 'snackbar')} />
-        </file-drop>
+      <div>
+        nguyendat
+        <Intro onFile={this.onIntroPickFile} showSnack={this.showSnack} />
       </div>
+      // <div class={style.app}>
+      //   <file-drop onfiledrop={this.onFileDrop} class={style.drop}>
+      //     {showSpinner ? (
+      //       // <loading-spinner class={style.appLoader} />
+      //       <div></div>
+      //     ) : isEditorOpen ? (
+      //       Compress && (
+      //         // <Compress file={file!} showSnack={this.showSnack} onBack={back} />
+      //         <div></div>
+      //       )
+      //     ) : (
+      //       // <Intro onFile={this.onIntroPickFile} showSnack={this.showSnack} />
+      //       <div></div>
+      //     )}
+      //     <snack-bar ref={linkRef(this, 'snackbar')} />
+      //   </file-drop>
+      // </div>
     );
   }
 }
