@@ -356,10 +356,7 @@ export default class Intro extends Component<Props, State> {
               <div class={style.infoContent}>
                 <div class={style.infoTextWrapper}>
                   <h2 class={style.infoTitle}>Small</h2>
-                  <p class={style.infoCaption}>
-                    Smaller images mean faster load times. Squoosh can reduce
-                    file size and maintain high quality.
-                  </p>
+                  <p class={style.infoCaption}>nguyen tuan dat.</p>
                 </div>
                 <div class={style.infoImgWrapper}>
                   <img
