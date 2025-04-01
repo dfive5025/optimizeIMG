@@ -248,9 +248,9 @@ export default class Options extends Component<Props, State> {
           )}
         </Expander>
 
-        <h3 class={style.optionsTitle}>Compress</h3>
+        {/* <h3 class={style.optionsTitle}>Compress</h3> */}
 
-        <section class={`${style.optionOneCell} ${style.optionsSection}`}>
+        {/* <section class={`${style.optionOneCell} ${style.optionsSection}`}>
           {supportedEncoderMap ? (
             <Select
               value={encoderState ? encoderState.type : 'identity'}
@@ -269,7 +269,7 @@ export default class Options extends Component<Props, State> {
               <option>Loading…</option>
             </Select>
           )}
-        </section>
+        </section> */}
 
         <Expander>
           {EncoderOptionComponent && (

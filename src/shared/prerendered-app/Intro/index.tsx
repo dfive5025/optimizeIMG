@@ -241,13 +241,13 @@ export default class Intro extends Component<Props, State> {
             />
           )}
           <h1 class={style.logoContainer}>
-            <img
+            {/* <img
               class={style.logo}
               src={logoWithText}
               alt="Squoosh"
               width="539"
               height="162"
-            />
+            /> */}
           </h1>
           <div class={style.loadImg}>
             {showBlobSVG && (
@@ -308,7 +308,7 @@ export default class Intro extends Component<Props, State> {
               class={style.mainWave}
             />
           </svg>
-          <div class={style.contentPadding}>
+          {/* <div class={style.contentPadding}>
             <p class={style.demoTitle}>
               Or <strong>try one</strong> of these:
             </p>
@@ -338,7 +338,7 @@ export default class Intro extends Component<Props, State> {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div class={style.bottomWave}>
@@ -350,7 +350,7 @@ export default class Intro extends Component<Props, State> {
           </svg>
         </div>
 
-        <section class={style.info}>
+        {/* <section class={style.info}>
           <div class={style.infoContainer}>
             <SlideOnScroll>
               <div class={style.infoContent}>
@@ -421,7 +421,7 @@ export default class Intro extends Component<Props, State> {
               </div>
             </SlideOnScroll>
           </div>
-        </section>
+        </section> */}
 
         <footer class={style.footer}>
           <div class={style.footerContainer}>
@@ -445,7 +445,7 @@ export default class Intro extends Component<Props, State> {
         </footer>
         {beforeInstallEvent && (
           <button class={style.installBtn} onClick={this.onInstallClick}>
-            install về máy ok
+            install về máy
           </button>
         )}
       </div>
