@@ -117,7 +117,7 @@ export default class App extends Component<Props, State> {
       // </div>
       <div class={style.app}>
         <file-drop onfiledrop={this.onFileDrop} class={style.drop}>
-          <div>okok</div>
+          <div>okokokok123</div>
           {showSpinner ? (
             <loading-spinner class={style.appLoader} />
           ) : isEditorOpen ? (
